@@ -1,0 +1,28 @@
+target/
+test-output/
+dist/
+.project
+.classpath
+.settings/
+.idea/
+.iml
+*.iml
+overlays/
+.repository
+
+# gedit temp backup files
+*.*~
+
+# versions plugin backup files
+*.versionsBackup
+metasearch-app/.tern-project
+
+metasearch-app/repo
+
+
+# wanna hold a non-committed version of filter-dev.properties?
+# put it here
+metasearch-app/src/main/filters/filter-me.properties
+
+# doing a merge with SourceTree? Ignore the .orig files!
+*.orig
