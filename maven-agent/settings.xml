@@ -1,0 +1,79 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- localRepository>${user.home}/.m2/repository</localRepository -->
+    <mirrors>
+        <mirror>
+            <id>nexusMirror</id>
+            <url>http://nexus.fsc.follett.com/nexus/content/groups/public</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+    <servers>
+        <server>
+            <id>uddev</id>
+            <username>devadmin</username>
+            <password>Stuffy2</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>default-repo</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>fsc-internal-snapshot</id>
+                    <name>FSC Internal Snapshot Repository</name>
+                    <url>http://nexus.fsc.follett.com/nexus/content/repositories/fsc-internal-snapshot</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>fsc-internal</id>
+                    <name>FSC Internal Release Repository</name>
+                    <url>http://nexus.fsc.follett.com/nexus/content/repositories/fsc-internal</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>fsc-nexus-thirdparty-releases</id>
+                    <name>FSC Internal 3rd Party Release Repository</name>
+                    <url>http://nexus.fsc.follett.com/nexus/content/repositories/thirdparty</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>fsc-internal-snapshot</id>
+                    <name>FSC Internal Snapshot Repository</name>
+                    <url>http://nexus.fsc.follett.com/nexus/content/repositories/fsc-internal-snapshot</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>fsc-internal</id>
+                    <name>FSC Internal Release Repository</name>
+                    <url>http://nexus.fsc.follett.com/nexus/content/repositories/fsc-internal</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>fsc-nexus-thirdparty-releases</id>
+                    <name>FSC Internal 3rd Party Release Repository</name>
+                    <url>http://nexus.fsc.follett.com/nexus/content/repositories/thirdparty</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>
